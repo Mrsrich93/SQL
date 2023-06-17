@@ -1,0 +1,27 @@
+--Create a Jacket store database
+
+CREATE TABLE Jackets (id integer primary key, color text, size text, price integer, aisle text, sold integer);
+INSERT INTO jackets values(1,"Silver","large","25","1","60");
+INSERT INTO jackets values(2,"Gold","large","25","2","70");
+INSERT INTO jackets values(3,"Red","Small","25","3","90");
+INSERT INTO jackets values(4,"Blue","Xl","25","4","40");
+INSERT INTO jackets values(5,"Orange","large","25","5","45");
+INSERT INTO jackets values(6,"White","large","25","6","34");
+INSERT INTO jackets values(7,"Green","large","25","7","25");
+INSERT INTO jackets values(8,"Purple","large","25","8","135");
+INSERT INTO jackets values(9,"Black","large","25","9","250");    
+INSERT INTO jackets values(10,"Pink","large","25","10","78");
+INSERT INTO jackets values(11,"Grey","large","25","11","100");
+INSERT INTO jackets values(12,"Yellow","large","25","12","35");
+INSERT INTO jackets values(13,"Brown","large","25","13","90");
+INSERT INTO jackets values(14,"Neon","large","25","14","45");
+INSERT INTO jackets values(15,"Peach","large","25","15","150");
+
+--Display the database ordered by aisle
+SELECT * FROM jackets ORDER BY aisle;
+
+--What is the sum (total) price of jackets sold
+SELECT SUM (PRICE) FROM jackets;
+
+--Display all jackets with 100 sales or more
+SELECT * FROM jackets WHERE sold >100 ORDER BY sold
